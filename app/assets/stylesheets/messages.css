@@ -1,0 +1,44 @@
+.wrapper{
+  display: flex;
+}
+
+.main-left{
+  width: 300px;
+  background-color: #253141;
+  height: 100vh;
+}
+
+.main-left-header{
+  height: 100px;
+  padding: 0 20px;
+}
+
+.main-left-rooms{
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+
+
+.main-right{
+  width: calc(100vw - 300px);
+  background-color: #fff;
+}
+
+.main-right-header{
+  height: 100px;
+  padding: 0 40px;
+}
+
+.main-right-messages{
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0 40px;
+}
+
+.main-right-form{
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+}
