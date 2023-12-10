@@ -1,7 +1,7 @@
 
   <div class="main-left-header">
   <div class=user-name>
-  <a herf="#">TOM</a>
+   <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
   <div class="class=chat-make">
   <a href="#">チャットを作成する</a>
