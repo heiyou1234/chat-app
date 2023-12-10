@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'messages/index'
   resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
   # delete '/logout', to: 'sessions#destroy'
   # get '/users/sign_out', to: 'sessions#destroy', as: 'sign_out'
   
