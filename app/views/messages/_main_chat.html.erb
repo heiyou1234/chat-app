@@ -5,24 +5,7 @@
   </div>
   </div>
   <div class="main-right-messages">
-  <div class=message>
-  <div class="upper-messeage">
-  <div class="main-right-messages-user">TOM</div>
-  <div class="main-right-messages-date">2023/12/9(sat) 08:53:53</div>
-  </div>
-  <div class="lower-message">
-  <div class="main-right-messages-content">good evening</div>
-  </div>
-  </div>
-  <div class=message>
-  <div class="upper-messeage">
-  <div class="main-right-messages-user">TOM</div>
-  <div class="main-right-messages-date">2023/12/9(sat) 08:53:53</div>
-  </div>
-  <div class="lower-message">
-  <div class="main-right-messages-content">good evening</div>
-  </div>
-  </div>
+    <%= render partial: 'message', collection: @messages %>
   </div>
   <div class="main-right-form">
   <div class="form-main">
