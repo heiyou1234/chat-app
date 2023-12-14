@@ -1,30 +1,22 @@
-  <div class="main-right-header">
-  <p class="chat-name">hogefuga</p>
-  <div class="chat-finish">
-  <a herf="#">チャットを終了する</a>
+<div class="chat-header">
+  <div class="left-header">
+    <div class="header-title">
+      <%= @room.name%>
+    </div>
   </div>
+  <div class="right-header">
+    <div class="header-button">
+      <%= link_to "チャットを終了する", room_path(@room), data: { turbo_method: :delete } %>
+    </div>
   </div>
-  <div class="main-right-messages">
-  <div class=message>
-  <div class="upper-messeage">
-  <div class="main-right-messages-user">TOM</div>
-  <div class="main-right-messages-date">2023/12/9(sat) 08:53:53</div>
-  </div>
-  <div class="lower-message">
-  <div class="main-right-messages-content">good evening</div>
-  </div>
-  </div>
-  <div class=message>
-  <div class="upper-messeage">
-  <div class="main-right-messages-user">TOM</div>
-  <div class="main-right-messages-date">2023/12/9(sat) 08:53:53</div>
-  </div>
-  <div class="lower-message">
-  <div class="main-right-messages-content">good evening</div>
-  </div>
-  </div>
-  </div>
-  <div class="main-right-form">
+</div>
+
+<div class="messages">
+  <%= render partial: 'message', collection: @messages %>
+</div>
+
+<%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f|%>
+
   <div class="form-main">
         <input  placeholder="type a message" class="form-content">
           <label class="form-image">

@@ -39,97 +39,102 @@
   padding: 20px 0 40px 0;
 }
 
-
-
-.main-right{
-  width: calc(100vw - 300px);
-  background-color: #fff;
-}
-
-.main-right-header{
+.chat-header {
   height: 100px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center
 }
 
-.chat-name{
-  font-size: 24px;
+.header-title {
   color: #333;
+  font-size: 24px;
   margin-top: 36px;
 }
 
-.chat-finish{
-  color: darkred;
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  text-decoration: none;
   border: 1px solid darkred;
+  color: darkred;
   padding: 20px;
 }
 
-.main-right-messages{
+.messages {
   background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
-  padding: 46px 40px 0 40px;
+  padding: 46px 40px 0;
   overflow: scroll;
 }
 
-.message{
-  padding-bottom: 40px;
-
+.message {
+  margin: 10px 0 0 0;
 }
-.upper-messeage{
+
+.upper-message{
   display: flex;
-  margin: 10px 0;
 }
 
-.main-right-messages-user{
+.message-user {
+  color: #434a54;
   font-size: 16px;
-  color: #434A54;
-  margin-right: 10px;
 }
 
-.main-right-messages-date{
-  font-size: 12px;
+.message-date {
   color: #999;
+  font-size: 12px;
+  padding-left: 10px;
 }
 
-.main-right-messages-content{
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  color: #434a54;
   font-size: 14px;
-  color: #434A54;
+  margin-bottom: 40px;
 }
 
-.main-right-form{
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+}
+
+.form {
   background-color: #DDDDDD;
   height: 90px;
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.form-main{
-  width: 100%;
-  display: flex;
-}
-
-
-.form-content{
-  padding-left: 10px;
+.form-input {
   background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-message {
+  border: none;
   height: 50px;
   width: 100%;
+  padding-left: 10px;
 }
 
-
-
-.form-button-content{
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
   height: 50px;
   margin-left: 15px;
   padding: 0 20px;
-  font-size: 16px;
-  column-rule: white;
 }
-
 
 .form-image {
   font-size: 12px;
