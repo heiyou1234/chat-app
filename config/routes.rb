@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'messages/index'
+  root to: "rooms#index"
   resources :users, only: [:edit, :update]
-  resources :rooms, only: [:new, :create]
-  # delete '/logout', to: 'sessions#destroy'
-  # get '/users/sign_out', to: 'sessions#destroy', as: 'sign_out'
-  
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root to: "messages#index"
+  resources :rooms, only: [:new, :create, :destroy] do
+    resources :messages, only: [:index, :create]
+  end
 end

@@ -1,18 +1,22 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      <%= @room.name %>
+      <%= @room.name%>
     </div>
   </div>
   <div class="right-header">
+    <div class="header-button">
+      <%= link_to "チャットを終了する", room_path(@room), data: { turbo_method: :delete } %>
+    </div>
+  </div>
+</div>
 
-  <a herf="#">チャットを終了する</a>
-  </div>
-  </div>
-  <div class="main-right-messages">
-    <%= render partial: 'message', collection: @messages %>
-  </div>
-  <div class="main-right-form">
+<div class="messages">
+  <%= render partial: 'message', collection: @messages %>
+</div>
+
+<%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f|%>
+
   <div class="form-main">
         <input  placeholder="type a message" class="form-content">
           <label class="form-image">
